@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import {FormSt,Label} from "components/Form/form.styled"
-import { addContact } from '../../redux/slice';
+import { postAddContact } from 'redux/operation';
 import { getContacts } from 'redux/selectors';
   
 export const Form = () => {
@@ -31,7 +31,7 @@ export const Form = () => {
       alert("Contact already exists")
       return;
     }
-    dispatch(addContact({name, number, id:nanoid()}))
+    dispatch(postAddContact({name, number, id:nanoid()}))
     resetForm();
   }
   const resetForm = () => {
