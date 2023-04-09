@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operation';
 import { Container } from "components/phoneBookItem/phoneItem.styled"
-export const ContactsItem = ({ item}) => {
+export const ContactsItem = ({item}) => {
     const dispatch = useDispatch();
     return (<Container>
         <span>{item.name}: {item.number}</span>
